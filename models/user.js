@@ -44,8 +44,7 @@ const userSchema = new mongoose.Schema({
 
 userSchema.pre('save', async function(next){
     const person = this;
-
-    // Hash the password only if it has been modified (or is new)
+    
     if(!person.isModified('password')) return next();
     try{
         // hash password generation

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {   
+            background-color: #343a40;
+            color: #ffffff;
+            top: 0;
+            padding: 15px 20px;
+            position: fixed;
+            width: 100%;
+            z-index: 1000; /* Ensure navbar is on top of other content */
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Center align menu items */
+        }
+        .navbar ul li {
+            margin-right: 20px;
+        }
+        .navbar ul li:last-child {
+            margin-right: 0;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            padding: 5px 10px; /* Add padding to menu items */
+            border-radius: 5px; /* Add rounded corners */
+        }
+        .navbar ul li a:hover {
+            background-color: #ffffff;
+            color: #343a40;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 50px); /* Adjust for navbar height */
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto; /* Enable vertical scroll */
+            margin-top: 50px; /* Adjust for navbar */
+        }
+        .left {
+            flex: 1;
+            text-align: center;
+        }
+        .left img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .right {
+            flex: 1;
+            padding-left: 20px;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            height: auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="candidate/vote/count">Vote Count</a></li>
+            <li><a href="/user/candidate">Candidates</a></li>
+            <li><a href="candidate/vote">Vote</a></li>
+            <li><a href="profile">User Profile</a></li>
+            <li><a href="dashboard">Logout</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="left">
+            <img src="/img1.jpg" alt="Image">
+        </div>
+        <div class="right">
+            <div class="form-container">
+                <h2>Add candidates</h2>
+                <form action="/user/candidate/add" method="post">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" required name="name" placeholder="candidate name">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" required name="age" placeholder="enter age">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="party">Party Name:</label>
+                        <input type="text" id="party" required name="party" placeholder="enter party">
+                    </div>
+            
+                    <div class="form-group">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 Shivam Technologies. All rights reserved.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Signup Form</h2>
+        <form action="/candidate/add" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" required name="name"><br>
+
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" required name="age" ><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" required email="email"><br>
+
+            <label for="mobile">Mobile:</label><br>
+            <input type="text" id="mobile" required name="mobile"><br>
+
+            <label for="address">Address:</label><br>
+            <textarea id="address" required name="address" ></textarea><br>
+
+            <label for="aadharCardNumber">Aadhar Card Number:</label><br>
+            <input type="number" id="aadharCardNumber" required name="aadharCardNumber"><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" required name="password" ><br>
+
+            <label for="role">Role:</label><br>
+            <select id="role" required name="role">
+                <option value="voter">Voter</option>
+                <option value="admin">Admin</option>
+            </select><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
